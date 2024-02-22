@@ -4,7 +4,7 @@
 	"description": "Discord Server Cloner  - Quater Studio",
 	"main": "src/index",
 	"scripts": {
-		"start": "tsx src/index"
+		"start": "qtr src/index"
 	},
 	"devDependencies": {
 		"@types/gradient-string": "^1.1.2",
