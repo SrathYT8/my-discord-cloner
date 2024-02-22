@@ -41,20 +41,20 @@ client.on("ready", async () => {
   const unixTimestamp = 1677642874;
   const dateFromTimestamp = new Date(unixTimestamp * 1000);
   const r = new Discord.RichPresence()
-    .setApplicationId('1119851163530051685')
+    .setApplicationId('1149980006643146762')
     .setType('PLAYING')
-    .setURL('https://discord.gg/YqwyCxjhJT')
-    .setName('Zsenpai Community')
+    .setURL('https://discord.gg/jdDjx9xNyd')
+    .setName('Quater Studios')
     .setState('Running...')
     .setDetails('The best server about bots')
     .setAssetsLargeImage('https://cdn.discordapp.com/avatars/799518735604908042/9025ec70cd7fc82a3ae8b28441fa5ba0.png?size=1024')
-    .setAssetsLargeText('Zsenpai Community')
+    .setAssetsLargeText('Quater Studios')
     .setAssetsSmallImage('https://cdn.discordapp.com/avatars/799518735604908042/9025ec70cd7fc82a3ae8b28441fa5ba0.png')
     .setAssetsSmallText('Join')
     .setStartTimestamp(dateFromTimestamp)
-    .addButton('Join', 'https://discord.gg/YqwyCxjhJT');
+    .addButton('Join', 'https://discord.gg/jdDjx9xNyd');
   client.user.setActivity(r);
-  client.user.setPresence({ status: "idle" });
+  client.user.setPresence({ status: "dnd" });
 });
 
 client.once("finish", (_event) => {
@@ -66,7 +66,7 @@ if (!token) {
   creatorname();
   rl.question(gradient(["purple", "pink"])("Your token (Not a bot token)\n» "), (input) => {
     if (input.trim() === '') {
-      console.log(gradient(["red", "orange"])("O token foi retornado como vazio"));
+      console.log(gradient(["red", "orange"])("The token was returned as empty"));
       process.kill(1);
     } else {
       client.login(input)
@@ -76,7 +76,7 @@ if (!token) {
             console.log(gradient(["red", "orange"])("Invalid token"));
           } else {
             console.clear();
-            console.error(gradient(["red", "orange"])(`Erro ao fazer login: ${error.message}`));
+            console.error(gradient(["red", "orange"])(`Error when logging in: ${error.message}`));
           }
         });
     }
@@ -90,7 +90,7 @@ if (!token) {
         console.log(gradient(["red", "orange"])("Invalid token"));
       } else {
         console.clear();
-        console.error(gradient(["red", "orange"])(`Erro ao fazer login: ${error.message}`));
+        console.error(gradient(["red", "orange"])(`Error when logging in: ${error.message}`));
       }
     });
 }
