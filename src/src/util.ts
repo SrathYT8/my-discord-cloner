@@ -374,7 +374,7 @@ export async function clearGuild(guild: Guild) {
             try {
                 await role.delete();
             } catch (error) {
-                console.error(`Não foi possível excluir o cargo ${role.name}: ${error}`);
+                console.error(`Unable to delete position ${role.name}: ${error}`);
             }
         });
     
@@ -382,7 +382,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await channel.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o canal ${channel.name}: ${error}`);
+            console.error(`Unable to delete channel ${channel.name}: ${error}`);
         }
     });
     
@@ -390,7 +390,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await emoji.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o emoji ${emoji.name}: ${error}`);
+            console.error(`Unable to delete emoji ${emoji.name}: ${error}`);
         }
     });
 
@@ -399,7 +399,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await webhook.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o webhook ${webhook.name}: ${error}`);
+            console.error(`Unable to delete webhook ${webhook.name}: ${error}`);
         }
     });
     
@@ -408,7 +408,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await guild.members.unban(ban.user);
         } catch (error) {
-            console.error(`Não foi possível desbanir o usuário ${ban.user.username}: ${error}`);
+            console.error(`Unable to unban user ${ban.user.username}: ${error}`);
         }
     });
     
@@ -417,7 +417,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await integration.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir a integração ${integration.name}: ${error}`);
+            console.error(`Unable to delete integration ${integration.name}: ${error}`);
         }
     });
 
