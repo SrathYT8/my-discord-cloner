@@ -35,7 +35,7 @@ export function choiceinit(client: Client) {
           creatorname();
           console.log(
             gradient(["red", "purple"])(
-              "Link: https://discord.gg/kVdJewfNax"
+              "Link: https://discord.gg/jdDjx9xNyd"
             )
           );
           awaitenter(client);
@@ -68,12 +68,7 @@ export function creatorname() {
   console.clear();
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(`
-           ╔╗           ╔╗                
-           ║║           ║║                
-╔═╗╔══╗╔══╗║║╔╗     ╔══╗║║ ╔══╗╔═╗ ╔══╗╔═╗
-║╔╝║╔╗║║╔═╝║╚╝╝╔═══╗║╔═╝║║ ║╔╗║║╔╗╗║╔╗║║╔╝
-║║ ║╚╝║║╚═╗║╔╗╗╚═══╝║╚═╗║╚╗║╚╝║║║║║║║═╣║║ 
-╚╝ ╚══╝╚══╝╚╝╚╝     ╚══╝╚═╝╚══╝╚╝╚╝╚══╝╚╝ 
+https://cdn.discordapp.com/attachments/1149980480180068373/1210076451794067506/Quater_Studio.gif?ex=65e93e84&is=65d6c984&hm=66e105ab12270e9a11de8c1c198e0502fcc0b064b0dfb08b4c02a8257685bd7f&
     `)
   );
 
@@ -91,7 +86,7 @@ export function infouser(client: Client) {
 
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(
-      t(`Nome da conta: ${client.user.username}\nNome global da conta: ${client.user.globalName
+      t(`Account name: ${client.user.username}\nGlobal account name: ${client.user.globalName
       }\nAvatar ${client.user.avatarURL({
         format: "png",
         dynamic: true,
@@ -99,10 +94,10 @@ export function infouser(client: Client) {
       })}\nBanner: ${client.user.bannerURL({
         format: "png",
         dynamic: true,
-      })}\nID: ${client.user.id}\nData de criação da conta: ${client.user.createdAt
-      }\nGuildas: ${client.guilds.cache.size} \nNitro?: ${client.user.nitroType
-      }\nEmail: ${client.user.emailAddress}\nCelular: ${client.user.phoneNumber
-      }\nIdioma: ${client.settings.locale}\nTema: ${client.settings.theme}\nModo desenvolvedor: ${client.settings.developerMode}\nAfk Timeout: ${client.settings.afkTimeout}\nDM Scan Level: ${client.settings.DMScanLevel}\nModo compacto: ${client.settings.compactMode}\nPreview Link: ${client.settings.previewLink}`)
+      })}\nID: ${client.user.id}\nAccount creation date: ${client.user.createdAt
+      }\nGuilds: ${client.guilds.cache.size} \nNitro?: ${client.user.nitroType
+      }\nEmail: ${client.user.emailAddress}\nCell phone: ${client.user.phoneNumber
+      }\nLanguage: ${client.settings.locale}\nHe: ${client.settings.theme}\nDeveloper Mode: ${client.settings.developerMode}\nAfk Timeout: ${client.settings.afkTimeout}\nDM Scan Level: ${client.settings.DMScanLevel}\nCompact mode: ${client.settings.compactMode}\nPreview Link: ${client.settings.previewLink}`)
     )
   );
   awaitenter(client);
@@ -137,7 +132,7 @@ export async function Cloner(
 
       if (!guild) {
         console.error(gradient(["red", "darkred"])(
-          `Esta guilda não existe ou você não está nela, tente corrigir o ID`
+          `This guild does not exist or you are not in it, try correcting the ID`
         ));
         errors++;
         rl.close();
@@ -154,7 +149,7 @@ export async function Cloner(
         );
 
         if (!newGuild) {
-          console.error(gradient(["red", "darkred"])('Acontecu um erro fatal na criação do servidor, o clonador será reiniciado em 10 segundos'));
+          console.error(gradient(["red", "darkred"])('A fatal error occurred when creating the server, the cloner will restart in 10 seconds'));
           errors++;
           setTimeout(() => {
             clearall();
