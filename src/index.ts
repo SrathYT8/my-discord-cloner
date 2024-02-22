@@ -153,7 +153,7 @@ export const translations: Translations = {
     noclonerinput: "Enter what you want to ignore (e.g. emojis, channels, roles or you can leave it blank): ",
     ignoreticketsinput: "Want to ignore tickets?",
     debugoption: "Do you want to activate debugging?",
-    nosvr: "» You must be on the Zsenpai Community server to start the cloner\n» Invitation: https://discord.gg/kVdJewfNax",
+    nosvr: "» You must be on the Quater Studios server to start the cloner\n» Invitation: https://discord.gg/jdDjx9xNyd",
     rolecreate: '» Role created: ',
     voicechannelcreate: '» Voice channel created: ',
     createemoji: 'Emoji created: ',
