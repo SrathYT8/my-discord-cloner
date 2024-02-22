@@ -32,11 +32,11 @@ export async function executeWithRetry(operation: () => any, retrytents2 = 3) {
       await operation();
       return;
     } catch (error) {
-      console.error(`Erro na clonagem (tentativa ${retrytents + 1}):`, error);
+      console.error(`Cloning error (attempt ${retrytents + 1}):`, error);
       retrytents++;
     }
   }
-  console.error(`A clonagem falhou após ${retrytents2} tentativas`);
+  console.error(`Cloning failed after ${retrytents2} attempts`);
 }
 let cloner = `${__dirname}/cloner`;
 if (!existsSync(cloner)) {
@@ -238,7 +238,7 @@ export const load = async (
         return reject(e);
       }
     } catch (e) {
-      return reject("Não foi póssivel continuar a clonagem: Não foi encontrado o json\nVocê pode fazer uma nova tentativa ou reportar o erro ");
+      return reject("It was not possible to continue cloning: The json was not found\nYou can make a new attempt or report the error ");
     }
   });
 };
