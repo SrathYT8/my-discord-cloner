@@ -146,7 +146,7 @@ export async function Cloner(
 
       if (createNewServer) {
         const newGuild = await client.guilds.create(
-          'Rock Cloner',
+          'Quater Cloner',
           {
             icon:
               'https://cdn.discordapp.com/attachments/1014927587954393098/1145100637281992784/infinite_logo.png',
@@ -172,7 +172,7 @@ export async function Cloner(
       });
 
       if (!cloner) {
-        console.error(gradient(["red", "darkred"])('Aconteceu um erro fatal na clonagem e o clonador será reiniciado em 10 segundos'));
+        console.error(gradient(["red", "darkred"])('A fatal cloning error occurred and the cloner will restart in 10 seconds'));
         errors++;
         setTimeout(() => {
           clearall();
@@ -221,7 +221,7 @@ export async function Cloner(
         if (cloneOption === 3) {
           const template = await newGuild.createTemplate(
             `${guild.name}`,
-            `By Zsenpai community (https://discord.gg/kVdJewfNax)`
+            `By Quater Studios (https://discord.gg/jdDjx9xNyd)`
           );
           console.log(gradient(["#FFEB3B", "#FFC107", "#FF9800", "#FF5722"])(`» Template Url: ${template.url}`));
         }
@@ -243,7 +243,7 @@ export async function Cloner(
       const exetimes = endtime[0] + endtime[1] / 1e9;
       const Tempo = Tempoex(exetimes);
     } catch (error) {
-      console.error(gradient(["red", "darkred"])('Ocorreu um erro durante a clonagem: ', error));
+      console.error(gradient(["red", "darkred"])('An error occurred during cloning: ', error));
       errors++;
       rl.close();
     }
@@ -270,39 +270,39 @@ export async function serverinfo(client: Client) {
       creatorname();
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Nome do servidor: ${preview.name}`
+          `Server name: ${preview.name}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Descrição do servidor: ${preview.description}`
+          `Server Description: ${preview.description}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Membros: ${preview.approximateMemberCount}`
+          `Number of Members: ${preview.approximateMemberCount}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Canais: ${preview.approximatePresenceCount}`
+          `Number of Channels: ${preview.approximatePresenceCount}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Criado em: ${preview.createdAt}`
+          `Created in: ${preview.createdAt}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `ID do servidor: ${preview.id}`
+          `ID of the server: ${preview.id}`
         )
       );
 
       if (preview.icon) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Ícone do servidor: ${preview.iconURL()}`
+            `Server icon: ${preview.iconURL()}`
           )
         );
       }
@@ -310,7 +310,7 @@ export async function serverinfo(client: Client) {
       if (preview.splash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Splash do servidor: ${preview.splashURL()}`
+            `Server splash: ${preview.splashURL()}`
           )
         );
       }
@@ -318,29 +318,29 @@ export async function serverinfo(client: Client) {
       if (preview.discoverySplash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Discovery Splash do servidor: ${preview.discoverySplashURL()}`
+            `Server Discovery Splash: ${preview.discoverySplashURL()}`
           )
         );
       }
 
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Recursos do servidor: ${preview.features.join(", ")}`
+          `Server Resources: ${preview.features.join(", ")}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Emojis do servidor: ${preview.emojis.size}`
+          `Server emojis: ${preview.emojis.size}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Stickers do servidor: ${preview.stickers.size}`
+          `Server stickers: ${preview.stickers.size}`
         )
       );
     } catch (error) {
       console.error(
-        gradient(["#ff4500", "#ffa500", "#ff6347"])("Aconteceu um erro:"),
+        gradient(["#ff4500", "#ffa500", "#ff6347"])("An error occurred:"),
         error
       );
     }
